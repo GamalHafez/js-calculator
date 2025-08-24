@@ -19,7 +19,7 @@ const calcMemory = {
 const calcFunctions = {
   slicing: function (word) {
     for (let letter of word) {
-      if (Boolean(Number(letter))) {
+      if (Boolean(Number(letter)) || letter ===".") {
         return word.indexOf(letter);
       }
     }
@@ -167,3 +167,4 @@ allButtons.forEach((button) => {
 
   button.addEventListener("animationend", () => removeAnimitaion(button));
 });
+
