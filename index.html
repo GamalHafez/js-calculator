@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="./images/calculator.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article class="calculator">
+        <header class="header">
+          <h1 class="header__heading">Calculator</h1>
+          <div class="themes">
+            <div class="themes__numbers">
+              <span>1</span>
+              <span>2</span>
+            </div>
+            <label class="themes__label-title" for="themes" aria-hidden="true"
+              >Theme</label
+            >
+            <input
+              class="themes__input"
+              type="checkbox"
+              name="themes"
+              id="themes"
+            />
+            <label
+              class="themes__label-button"
+              role="button"
+              tabindex="0"
+              aria-label="Toggle dark mode"
+              for="themes"
+            >
+            </label>
+          </div>
+        </header>
+
+        <output class="calculator__screen" aria-live="polite">0</output>
+
+        <section class="calculator__buttons">
+          <button
+            type="button"
+            data-type="number"
+            data-key="7"
+            class="calculator__button"
+          >
+            7</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="8"
+            class="calculator__button"
+          >
+            8</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="9"
+            class="calculator__button"
+          >
+            9</button
+          ><button
+            type="button"
+            class="calculator__button calculator__button-del"
+            aria-label="Delete last digit"
+            data-type="del"
+          >
+            DEL</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="4"
+            class="calculator__button"
+          >
+            4</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="5"
+            class="calculator__button"
+          >
+            5</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="6"
+            class="calculator__button"
+          >
+            6</button
+          ><button
+            type="button"
+            class="calculator__button"
+            aria-label="Plus"
+            data-type="operator"
+            data-key="+"
+          >
+            +</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="1"
+            class="calculator__button"
+          >
+            1</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="2"
+            class="calculator__button"
+          >
+            2</button
+          ><button
+            type="button"
+            data-type="number"
+            data-key="3"
+            class="calculator__button"
+          >
+            3</button
+          ><button
+            type="button"
+            class="calculator__button"
+            aria-label="Minus"
+            data-type="operator"
+            data-key="-"
+          >
+            -</button
+          ><button
+            type="button"
+            data-type="number"
+            class="calculator__button"
+            aria-label="Decimal-point"
+            data-key="."
+          >
+            .</button
+          ><button
+            type="button"
+            class="calculator__button"
+            data-type="number"
+            data-key="0"
+          >
+            0</button
+          ><button
+            type="button"
+            class="calculator__button"
+            aria-label="Divide"
+            data-type="operator"
+            data-key="/"
+          >
+            /</button
+          ><button
+            type="button"
+            class="calculator__button"
+            aria-label="Multiply"
+            data-type="operator"
+            data-key="x"
+          >
+            x</button
+          ><button
+            type="button"
+            class="calculator__button calculator__button-reset"
+            aria-label="Reset calculator"
+            data-type="reset"
+          >
+            RESET</button
+          ><button
+            type="button"
+            class="calculator__button calculator__button-equal"
+            aria-label="Calculate result"
+            data-type="equal"
+          >
+            =
+          </button>
+        </section>
+      </article>
+    </main>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./main.js"></script>
+    <script src="./accessibility.js"></script>
+  </body>
+</html>

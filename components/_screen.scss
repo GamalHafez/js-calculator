@@ -1,0 +1,33 @@
+.calculator__screen {
+  color: var(--color-white-text);
+  background-color: var(--color-screen-background);
+  padding: 2.5rem 2rem;
+  text-align: right;
+  line-height: 1;
+  font-size: var(--font-size-32);
+  border-radius: calc(var(--border-radius) / 2);
+  transition: background-color var(--timing-animation);
+
+  &.overflow {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0.4rem; /* width of vertical scrollbar */
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color-key-blue-hover); /* handle color */
+      border-radius: var(--border-radius);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-key-blue-background); /* track color */
+      border-radius: var(--border-radius);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--color-key-blue-shadow); /* hover color */
+    }
+  }
+}

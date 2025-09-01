@@ -1,0 +1,101 @@
+.calculator__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--color-dark-blue-text);
+  gap: 2rem;
+  padding: 2rem;
+  font-size: var(--font-size-24);
+  background-color: var(--color-keypad-background);
+  border-radius: calc(var(--border-radius) / 2);
+  transition: background-color var(--timing-animation);
+}
+
+.calculator__button {
+  position: relative;
+  border-radius: calc(var(--border-radius) / 2);
+  height: 4rem;
+  isolation: isolate;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--border-radius) / 2);
+    right: 0;
+    transition: all 0.3s;
+  }
+
+  &::after {
+    background-color: var(--color-key-gray-background);
+    z-index: -1;
+    bottom: 0.1rem;
+  }
+
+  &::before {
+    background-color: var(--color-key-gray-shadow);
+    z-index: -2;
+    bottom: -0.2rem;
+  }
+
+  &:hover::after,
+  &.hover::after {
+    background-color: var(--color-white-hover);
+  }
+
+  &-equal {
+    color: var(--color-white-button-text);
+
+    &::after {
+      background-color: var(--color-key-red-background);
+    }
+
+    &::before {
+      background-color: var(--color-key-red-shadow);
+    }
+
+    &:hover::after,
+    &.hover::after {
+      background-color: var(--color-key-red-hover);
+    }
+  }
+
+  &-equal,
+  &-reset {
+    grid-column: span 2;
+  }
+
+  &-del,
+  &-reset {
+    color: var(--color-white-button-text);
+
+    &::after {
+      background-color: var(--color-key-blue-background);
+    }
+
+    &::before {
+      background-color: var(--color-key-blue-shadow);
+    }
+
+    &:hover::after,
+    &.hover::after {
+      background-color: var(--color-key-blue-hover);
+    }
+  }
+
+  &:not([data-type="number"]) {
+    font-size: var(--font-size-18);
+    padding-block-end: 0.2rem;
+  }
+}
+
+@keyframes clickMove {
+  50% {
+    transform: scale(0.96);
+  }
+}
+
+.click {
+  animation: clickMove var(--timing-animation) ease-in-out reverse;
+}
